@@ -26,7 +26,6 @@ def log_in():
 
 
 @app.route('/api/create_user', methods=['POST'])
-@admin_required
 def create_user():
     """Create a new user"""
     # Get form contents

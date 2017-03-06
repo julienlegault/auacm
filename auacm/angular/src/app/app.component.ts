@@ -47,6 +47,11 @@ export class AppComponent implements OnInit {
     });
   }
 
+  signUp() {
+    $("#dropdownMenu1").dropdown("toggle");	
+    this._router.navigate(['/users/create']);
+  }
+
   navigateTo(page: string) {
     this._router.navigate([page]);
   };

@@ -1,7 +1,7 @@
 <div class="margin-top col-md-8 col-md-offset-2">
   <div class="panel panel-default">
-    <div class="panel-heading"><h1 class="panel-title">Create New User</h1></div>
-    <div *ngIf="activeUser.loggedIn" class="panel-body">
+    <div class="panel-heading"><h1 class="panel-title">Register</h1></div>
+    <div class="panel-body">
       <form name="createUserForm" novalidate submit="submit(username,
           password, displayName, passwordConfirm)">
         <!-- Display Name -->
@@ -66,7 +66,7 @@
         <!-- Submit button -->
         <button class="btn btn-default" type="submit" (click)="submit(username,
             password, displayName, passwordConfirm)">
-          Create User
+          Sign Up
         </button>
 
         <!-- Display a failed/successful user creation -->

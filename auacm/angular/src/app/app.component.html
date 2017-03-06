@@ -24,9 +24,6 @@
               'hover-pointer': true}">
             <a [routerLink]="['judge']">Judge</a>
           </li>
-          <li [ngClass]="{active: _router.url == '/rankings', 'hover-pointer': true}">
-            <a [routerLink]="['rankings']">Rankings</a>
-          </li>
           <li [ngClass]="{active: _router.url == '/competitions', 'hover-pointer': true}">
             <a [routerLink]="['competitions']">Competitions</a>
           </li>
@@ -51,7 +48,7 @@
           <li class="dropdown">
             <a (click)="openDropdownMenu()"class="dropdown-toggle hover-pointer"
                 id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              {{user.displayName === '' ? 'Log In' : user.displayName}}<span class="caret"></span></a>
+              {{user.displayName === '' ? 'Log In / Sign Up' : user.displayName}}<span class="caret"></span></a>
 
             <!-- If the user is logged in, show their options -->
             <ul *ngIf="user.loggedIn" class="dropdown-menu">
@@ -85,6 +82,7 @@
               </form>
 
               <button class="btn btn-success" style="width:100%;" (click)="logIn()">Log in</button>
+              <button class="btn btn-primary" style="margin-top: 5px; width:100%;" (click)="signUp()">Sign Up!</button>
             </div>
           </li>
         </ul>
